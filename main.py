@@ -29,20 +29,6 @@ def main():
     Subitsha = Resort + Snacks + Vodka + CabMinus + CabPlus
 
     # Store persons and their expenses in a dictionary for check
-    persons = {
-        'Mukesh': Mukesh,
-        'Goutham': Goutham,
-        'Vasavi': Vasavi,
-        'Sunil': Sunil,
-        'Vansi': Vansi,
-        'Bhavesh': Bhavesh,
-        'Priyesh': Priyesh,
-        'Subitsha': Subitsha
-    }
-
-    # Print individual cost breakdowns
-    for name, total in persons.items():
-        print(f"{name}: {round(total)}")
 
 
     # Calculate how much each person needs to get back or pay
@@ -52,10 +38,28 @@ def main():
     PriyeshShare = Priyesh - PriyeshSpent
 
     print()
-    print(f"MukeshShare: {round(MukeshShare)}")
-    print(f"SubitshaShare: {round(SubitshaShare)}")
-    print(f"BhaveshShare: {round(BhaveshShare)}")
-    print(f"PriyeshShare: {round(PriyeshShare)}")
+    # print(f"MukeshShare: {round(MukeshShare)}")
+    # print(f"SubitshaShare: {round(SubitshaShare)}")
+    # print(f"BhaveshShare: {round(BhaveshShare)}")
+    # print(f"PriyeshShare: {round(PriyeshShare)}")
+
+    persons = {
+        'Mukesh': MukeshShare,
+        'Goutham': Goutham,
+        'Vasavi': Vasavi,
+        'Sunil': Sunil,
+        'Vansi': Vansi,
+        'Bhavesh': BhaveshShare,
+        'Priyesh': PriyeshShare,
+        'Subitsha': SubitshaShare
+    }
+
+    # Print individual cost breakdowns
+    print(f"{'Name':<10} {'Total':>10}")
+    print("-" * 22)
+    for name, total in persons.items():
+        print(f"{name:<10} {round(total):>10}")
+
 
 
 if __name__ == "__main__":
